@@ -1,0 +1,37 @@
+﻿🌮
+Prints all the permutations of a parameter string
+🌮
+🐋 🍨 🍇			    								👴 extend list class
+  🐖 🐷 ➡ 🔡 🍇									 👴 define method of PigFace, returns type List:
+
+  	🍮 permutations 🔷 🍨🐚🔡 🐸 	👴 List<String> permutations     (mutable var perms of enum type: List of type: String (what's frog))
+
+  	🍊 ⬅ (🐔) 1 🍇									👴 if strlen of str param <= 1 {
+  		🐖 🐻 🐕 permutations 📻  		👴 		permutations.add(string param)
+  	🍉 🍓	 🍇												 👴 } else {
+  		🔂 i ⏭ 0 🐔 🍇								👴 		from i -> strlen
+  			🍦 ch 🔪 🐕 i (i➕1)					👴 				char ch = string.charAt(i)
+  			
+    		🍦 remainder 🍪 (🔪 🐕 0 i)	 👴 			String remainder = substring(0, i) + substring(i+1, strlen) 
+    		(🔪 🐕 (i➕1) 🐔 🐕) 
+    	🍉															👴}
+    	👴 💣 separator 🔣 ➡️ 🍨🐚🔡 📻  (substrings at each place separator is found -> list)
+    	🍮 subperms 🔷 🍨🐚🔡 🐸			👴 List<String> subperms (mutable var subperms of enum type: List of type: String)
+    	🍮 subperms 🐻 remainder		  	👴 subperms = pigface method (recursive)   (subperms.add(remainder))
+
+    	🔂 miniperm subperms 🍇					👴 for string miniperm in subperms
+    		🐖 🐻 (🍪 ch miniperm) permutations 📻 	👴 permutations.add(ch + miniperm) 
+				
+    	🍉
+    🍉
+    🍎 permutations
+  🍉
+🍉
+
+👴 test our program
+🏁 🍇
+  😀 🐷 🔤ab🔤
+  😀 🐷 🔤dab🔤
+  😀 🐷 🔤mano🔤
+🍉
+
